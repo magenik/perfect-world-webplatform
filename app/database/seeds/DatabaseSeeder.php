@@ -12,7 +12,7 @@ class DatabaseSeeder extends Seeder {
 		Eloquent::unguard();
 
 		$this->call('AdminSeeder');
-		$this->command->info('Admin User created with username admin@admin.com and password : admin');
+		$this->command->info('Admin User created with username admin@admin.com and password : 123456');
 	}
 
 }

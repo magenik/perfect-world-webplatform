@@ -105,19 +105,6 @@ class AuthController extends SwoController
             
             $password = Hash::make(Input::get('password'));
 
-            /**
-            *$create_user = DB::table('users')->insert(array(
-            *    'id'         => $new_id,
-            *    'name'       => Input::get('name'),
-            *    'first_name' => Input::get('first_name'),
-            *    'last_name'  => Input::get('last_name'),
-            *    'email'      => Input::get('email'),
-            *    'passwd'     => $Salt,
-            *    'password'   => $password,
-            *    'activated'  => 1 // make it 0 if you don't want to activate user on registration
-            *));
-             */
-
             $user = Sentry::register(array(
                 'id'         => $new_id,
                 'passwd'     => $Salt,
@@ -129,25 +116,10 @@ class AuthController extends SwoController
                 'activated'  => 1 // make it 0 if you don't want to activate user on registration
             ));
 
-            //$user = DB::select('CALL adduser(?,?,?,?,?,?)',array(
-            //    'name'       => Input::get('name'),
-            //    'first_name' => Input::get('first_name'),
-            //    'last_name'  => Input::get('last_name'),
-            //    'email'      => Input::get('email'),
-            //    'password'   => Input::get('password'),
-            //    'created_at' => time(),
-            //   'activated'  => 1 // make it 0 if you don't want to activate user on registration
-            //));
 
             //add user to 'User' group
             $group = Sentry::findGroupByName('User');
             $user->addGroup($group);
-            
-            //$group = DB::table('users_groups')->insert(array(
-            //    'user_id'         => $new_id,
-            //    'group_id'       => 2 // 1 for admin & 2 for normal user
-            //));
-            //$user->addGroup($group);
 
             /*
             //un-comment below code incase if user have to activate manually
