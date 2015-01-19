@@ -1,0 +1,58 @@
+/*Nestable custom css*/
+.dd {
+	float: left;
+	width: 48%;
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 13px;
+	line-height: 20px;
+}
+.dd-handle:hover {
+	color: #36a9e1;
+	background: white;
+}
+.dd-list {
+	display: block;
+	position: relative;
+	margin: 0;
+	padding: 3px;
+	list-style: none;
+}
+.dd-handle .icon {
+	float: right;
+	font-size: 16px;
+	margin-left: 10px;
+}
+.dd-list .dd-list {
+	padding-left: 30px;
+}
+#nestable2 .dd-handle {
+	color: white;
+	border: 1px solid #c7cbd5;
+	background: #c7cbd5;
+}
+#nestable2 .dd-handle:hover {
+	border: 1px solid #383e4b;
+	background: #383e4b
+}
+#nestable2 .dd-item>button:before {
+	color: #fff
+}
+.dd-handle {
+	display: block;
+	height: 30px;
+	padding: 5px 10px;
+	text-decoration: none;
+	font-weight: bold;
+	border: 1px solid #c7cbd5;
+	background: #f6f6f8;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}

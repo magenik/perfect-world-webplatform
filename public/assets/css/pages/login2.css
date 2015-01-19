@@ -1,0 +1,16 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
+body {
+    background: url(../../img/parallax/back.png);
+    background-color: #444;
+    background: url(../../img/parallax/pinlayer2.png), url(../../img/parallax/pinlayer1.png), url(../../img/parallax/back.png);
+    font-family: 'lato';
+}
+.vertical-offset-100 {
+    padding-top: 100px;
+}
+h3 {
+    font-size: 22px ! important;
+}
+.btn-primary {
+    background: #428BCA;
+}

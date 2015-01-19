@@ -1,0 +1,90 @@
+.fc-header-title h2 {
+	margin-top: 0;
+	white-space: nowrap;
+	font-size: 15px;
+	font-weight: bold;
+	color: #4D4C4C;
+}
+.fc-widget-header {  /* <td>, usually */
+	border: 1px solid #ccc;
+	color: #4D4C4C;
+	font-size: 12px;
+	background-color: #ccc;
+}
+.fc-widget-content {  /* <td>, usually */
+	border: 1px solid #ccc;
+	color: #F3123F;
+}
+.fc-header-left {
+	width: 20%;
+	text-align: left;
+	font-size: 12px;
+}
+.fc-header-right {
+	width: 20%;
+	text-align: right;
+	font-size: 12px;
+}
+.fc .fc-header-space {
+	padding-left: 0px;
+}
+#external-events {
+	float: left;
+	width: 200px;
+	padding: 0 5px;
+	text-align: left;
+}
+#external-events h4 {
+	font-size: 16px;
+	margin-top: 0;
+	padding-top: 1em;
+}
+.external-event { /* try to mimick the look of a real event */
+	margin: 10px 0;
+	padding: 6px;
+	background: #5bc0de;
+	color: #fff;
+	border-radius: 5px;
+	font-size: .85em;
+	cursor: pointer;
+}
+#external-events p {
+	margin: 1.5em 0;
+	font-size: 11px;
+	color: #666;
+}
+#external-events p input {
+	margin: 0;
+	vertical-align: middle;
+}
+#calendar {
+	float: right;
+	width: 98%;
+	height: 350px;
+	max-height:350px;
+	float:left;
+}
+.primary {
+	background: #418BCA;
+}
+.success {
+	background: #00bc8c;
+}
+.warning {
+	background: #F89A14;
+}
+.danger {
+	background: #EF6F6C;
+}
+.mandotory {
+	color: #ca0002;
+}
+.fc-event {
+	border: 0;
+}
+.fc-grid .fc-day-number {
+	float: right;
+	padding: 0 2px;
+	color: #000;
+	font-size: 11px;
+}

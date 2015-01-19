@@ -1,0 +1,136 @@
+.nav-tabs li.active a {
+border: 2px solid #ccc;
+border-bottom: 0;
+}
+.grid.replies .item img {
+  width: 100%;
+}
+.grid.replies .item p img,
+.grid.replies .item p + img {
+  margin-top: 25px;
+}
+.grid.replies .avatar img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.grid.replies .avatar img.avatar-default {
+  display: none;
+}
+.tab-content {
+background: #fff;
+padding: 20px 15px;
+margin-bottom: 20px;
+border: 2px solid #ccc;
+border-top: 0;
+}
+.gallery-pages .list-filter {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.gallery-pages .list-filter li {
+  cursor: pointer;
+  padding: 6px 15px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  background: #eee;
+  display: inline-block;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.gallery-pages .list-filter li.active,
+.gallery-pages .list-filter li:hover,
+.gallery-pages .list-filter li:focus {
+  background: #dc6767;
+  color: #ffffff;
+}
+.gallery-pages .mix-grid .mix {
+  display: none;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.gallery-pages .mix-grid .mix .hover-effect {
+  position: relative;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+  overflow: hidden;
+}
+.gallery-pages .mix-grid .mix .hover-effect .img {
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.gallery-pages .mix-grid .mix .hover-effect .info {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background: rgba(26, 74, 114, 0.6);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
+}
+.gallery-pages .mix-grid .mix .hover-effect .info h3 {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  background: #111111;
+  margin: 30px 0 0 0;
+}
+.gallery-pages .mix-grid .mix .hover-effect .info p {
+  font-style: italic;
+  font-size: 12px;
+  position: relative;
+  color: #e0e0e0;
+  padding: 20px 20px 20px;
+  text-align: center;
+}
+.gallery-pages .mix-grid .mix .hover-effect .info a.mix-link {
+  color: #fff;
+  text-align: center;
+  padding: 10px 15px;
+  background: #dc6767;
+  margin: 20px 10px 20px 0;
+  display: inline-block;
+}
+.gallery-pages .mix-grid .mix .hover-effect .info a.mix-zoom {
+  color: #fff;
+  text-align: center;
+  padding: 10px 15px;
+  background: #dc6767;
+  margin: 20px 10px 20px 0;
+  display: inline-block;
+}
+.gallery-pages .mix-grid .mix .hover-effect:hover .img {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.gallery-pages .mix-grid .mix .hover-effect:hover .info {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}

@@ -1,0 +1,242 @@
+<?php /* Page title */ ?>
+<?php $__env->startSection('title'); ?>
+View User Details
+@parent
+<?php $__env->stopSection(); ?>
+
+<?php /* page level styles */ ?>
+<?php $__env->startSection('header_styles'); ?>
+<!--page level css -->
+<link href="<?php echo asset('assets/vendors/jasny-bootstrap/css/jasny-bootstrap.css'); ?>" rel="stylesheet" type="text/css" />
+<link href="<?php echo asset('assets/vendors/x-editable/css/bootstrap-editable.css'); ?>" rel="stylesheet" type="text/css" />
+<link href="<?php echo asset('assets/css/pages/user_profile.css'); ?>" rel="stylesheet" type="text/css"/>
+<!--end of page level css-->
+<?php $__env->stopSection(); ?>
+
+
+<?php /* Page content */ ?>
+<?php $__env->startSection('content'); ?>
+<section class="content-header">
+    <h1>View User</h1>
+    <ol class="breadcrumb">
+        <li>
+            <a href="index"> <i class="livicon" data-name="home" data-size="16" data-color="#000"></i>
+                Dashboard
+            </a>
+        </li>
+        <li>Users</li>
+        <li class="active">View User</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-lg-12">
+            <ul class="nav  nav-tabs ">
+                <li class="active">
+                    <a href="#tab1" data-toggle="tab"> <i class="livicon" data-name="user" data-size="16" data-c="#000" data-hc="#000" data-loop="true"></i>
+                        User Profile
+                    </a>
+                </li>
+                <li>
+                    <a href="#tab2" data-toggle="tab">
+                        <i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#000" data-hc="#000"></i>
+                        Change Password
+                    </a>
+                </li>
+            </ul>
+            <div  class="tab-content mar-top">
+                <div id="tab1" class="tab-pane fade active in">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">
+                                        <?php echo \Illuminate\Support\Facades\Lang::get('users/title.user_profile'); ?>
+                                    </h3>
+
+                                </div>
+                                <div class="panel-body">
+                                    <div class="col-md-4">
+                                        <h4 class="text-primary"> Profile Pic</h4>
+                                        <div class="img-file"> 
+                                            <?php if($user->pic): ?>
+                                                <img src="<?php echo e(url('/').'/uploads/users/'.$user->pic); ?>" alt="profile pic" class="img-max">
+                                            <?php else: ?>
+                                                <img src="http://placehold.it/200x200" alt="profile pic">
+                                            <?php endif; ?>   
+                                        </div>
+                                        <hr>
+                                        <div>
+                                            <h4 class="text-primary">Bio</h4>
+                                            <div><?php echo e($user->bio); ?></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="panel-body">
+                                            <div class="table-responsive">
+                                                <form method="post" action="#">
+
+                                                <table class="table table-bordered table-striped" id="users">
+    
+                                                    <tr>
+                                                        <td><?php echo \Illuminate\Support\Facades\Lang::get('users/title.first_name'); ?></td>
+                                                        <td>
+                                                            <?php echo $user->first_name; ?>
+
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td><?php echo \Illuminate\Support\Facades\Lang::get('users/title.last_name'); ?></td>
+                                                        <td>
+                                                            <?php echo $user->last_name; ?>
+
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td><?php echo \Illuminate\Support\Facades\Lang::get('users/title.email'); ?></td>
+                                                        <td>
+                                                            <?php echo $user->email; ?>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <?php echo \Illuminate\Support\Facades\Lang::get('users/title.gender'); ?>
+                                                        </td>
+                                                        <td>
+                                                                <?php echo $user->gender; ?>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><?php echo \Illuminate\Support\Facades\Lang::get('users/title.dob'); ?></td>
+                                                        <td>
+                                                                <?php echo $user->dob; ?>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><?php echo \Illuminate\Support\Facades\Lang::get('users/title.country'); ?></td>
+                                                        <td>
+                                                            <?php echo $user->country; ?>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><?php echo \Illuminate\Support\Facades\Lang::get('users/title.state'); ?></td>
+                                                        <td>
+                                                            <?php echo $user->state; ?>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><?php echo \Illuminate\Support\Facades\Lang::get('users/title.city'); ?></td>
+                                                        <td>
+                                                            <?php echo $user->city; ?>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><?php echo \Illuminate\Support\Facades\Lang::get('users/title.address'); ?></td>
+                                                        <td>
+                                                            <?php echo $user->address; ?>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><?php echo \Illuminate\Support\Facades\Lang::get('users/title.postal'); ?></td>
+                                                        <td>
+                                                            <?php echo $user->postal; ?>
+
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><?php echo \Illuminate\Support\Facades\Lang::get('users/title.status'); ?></td>
+                                                        <td>
+                                                            <?php if($user->activated): ?>
+                                                                Activated
+                                                            <?php else: ?>
+                                                                Pending
+                                                            <?php endif; ?>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><?php echo \Illuminate\Support\Facades\Lang::get('users/title.created_at'); ?></td>
+                                                        <td>
+                                                            <?php echo e($user->created_at->diffForHumans()); ?>
+
+                                                        </td>
+                                                    </tr> 
+                                                </table>
+                                            </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab2" class="tab-pane fade">
+                    <div class="row">
+                        <div class="col-md-12 pd-top">
+                            <form action="#" class="form-horizontal">
+                                <!-- CSRF Token -->
+                                <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>" />
+                                
+                                <div class="form-body">
+                                    <div class="form-group">
+                                        <label for="inputpassword" class="col-md-3 control-label">
+                                            Password
+                                            <span class='require'>*</span>
+                                        </label>
+                                        <div class="col-md-9">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#000" data-hc="#000"></i>
+                                                </span>
+                                                <input type="password" placeholder="Password" class="form-control"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputnumber" class="col-md-3 control-label">
+                                            Confirm Password
+                                            <span class='require'>*</span>
+                                        </label>
+                                        <div class="col-md-9">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#000" data-hc="#000"></i>
+                                                </span>
+                                                <input type="password" placeholder="Password" class="form-control"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        &nbsp;
+                                        <button type="button" class="btn btn-danger">Cancel</button>
+                                        &nbsp;
+                                        <input type="reset" class="btn btn-default hidden-xs" value="Reset"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<?php $__env->stopSection(); ?>
+
+<?php /* page level scripts */ ?>
+<?php $__env->startSection('footer_scripts'); ?>
+<!-- Bootstrap WYSIHTML5 -->
+<script  src="<?php echo asset('assets/vendors/jasny-bootstrap/js/jasny-bootstrap.js'); ?>" type="text/javascript"></script>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('user/layouts/default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

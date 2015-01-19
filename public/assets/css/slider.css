@@ -1,0 +1,39 @@
+.col-item
+{
+    border: 1px solid #E1E1E1;
+    border-radius: 5px;
+    background: #FFF;
+}
+.col-item .info
+{
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    margin-top: 1px;
+}
+.clear-left
+{
+    clear: left;
+}
+.col-item .btn-add
+{
+    width: 50%;
+    float: left;
+}
+.col-item .btn-add
+{
+    border-right: 1px solid #E1E1E1;
+}
+.col-item .btn-details
+{
+    width: 50%;
+    float: left;
+    padding-left: 10px;
+}
+.controls
+{
+    margin-top: 20px;
+}
+[data-slide="prev"]
+{
+    margin-right: 10px;
+}

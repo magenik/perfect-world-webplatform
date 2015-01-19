@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="robots" content="index,follow"> 
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>countUp.js</title>
+
+    <link rel="stylesheet" type="text/css" href="../assets/style.css">
+
+    <script type="text/javascript" src="countUp.js"></script>
+    <script type="text/javascript">
+    
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-7742845-9', 'inorganik.github.io');
+    ga('send', 'pageview');
+
+    </script>
+</head>
+
+<body>
+    <a href="https://github.com/inorganik/countUp.js"><img style="position: fixed; bottom: 0; right: 0; border: 0;" src="../images/forkme_custom_indigo.png" alt="Fork me on GitHub"></a>
+    <div id="wrap">
+        <header>
+            <div id="github"><a class="block" href="https://github.com/inorganik"></a></div>
+            <div class="leaderLine">////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</div>
+            <div id="logo"><a class="block" href="http://inorganik.github.io"></a></div>
+        </header>
+        <section>
+            <h1>countUp.js &nbsp;<small id="version" class="lt-gray"></small></h1>
+            <p>countUp.js is a dependency-free, lightweight JavaScript "class" that can be used to quickly create animations that display numerical data in a more interesting way.</p>
+            <h3 class="marginTop marginBottom"><a class="lime weight700" href="https://github.com/inorganik/countUp.js">Download on Github</a></h3>
+        </section>
+        <section>
+            <h1 class="jumbo" id="myTargetElement">24.02</h1>
+        </section>
+        <section>
+            <form>
+                <h4 class="inlineLeft noMargin weight300">Params:</h4>
+                <div class="inlineLeft marginLeft marginRight">
+                    <input type="text" value="24.02" id="startVal" style="width:160px" onkeyup="updateCodeVisualizer()">
+                    <label class="inlineLabel">Start</label>
+                </div>
+                <input type="button" class="inlineLeft marginRight" value="Swap" onClick="swapValues()" style="width:80px;">
+                <div class="inlineLeft marginRight">
+                    <input type="text" value="94.62" id="endVal" style="width:160px" onkeyup="updateCodeVisualizer()">
+                    <label class="inlineLabel">End</label>
+                </div>
+                <div class="inlineLeft marginRight">
+                    <input type="number" value="2" id="decimals" step="1" style="width:50px" onkeyup="updateCodeVisualizer()" onchange="updateCodeVisualizer()">
+                    <label class="inlineLabel">Decimals</label>
+                </div>
+                <div class="inlineLeft marginRight">
+                    <input type="number" value="2.5" id="duration" step=".1" style="width:50px" onkeyup="updateCodeVisualizer()" onchange="updateCodeVisualizer()">
+                    <label class="inlineLabel">Duration</label>
+                </div>
+            </form>
+        </section>
+        <section>
+            <form>
+                <h4 class="inlineLeft noMargin weight300">Options:</h4>
+                <div class="inlineLeft marginLeft marginRight">
+                    <input type="checkbox" onClick="toggleEasing(this)" checked><label class="inlineLabel">Use easing</label>
+                </div>
+                <div class="inlineLeft marginRight">
+                    <input type="checkbox" onClick="toggleGrouping(this)" checked><label class="inlineLabel">Use grouping</label>
+                </div>
+                <div class="inlineLeft marginRight">
+                    <input type="text" value="," id="separator" style="width:15px; padding:0 5px;" onkeyup="updateCodeVisualizer()">
+                    <label class="inlineLabel">Separator</label>
+                </div>
+                <div class="inlineLeft marginRight">
+                    <input type="text" value="." id="decimal" style="width:15px; padding:0 5px;" onkeyup="updateCodeVisualizer()">
+                    <label class="inlineLabel">Decimal</label>
+                </div>
+            </form>
+        </section>
+        <section>
+            <form>
+                <h4 class="inlineLeft noMargin weight300">Methods:</h4>
+                <input type="button" value="Start" onClick="createCountUp()" class="inlineLeft marginLeft marginRight" style="width:80px;">
+                <input type="button" value="Stop" onClick="showCodeAndStop()" class="inlineLeft marginRight" style="width:80px;">
+                <input type="button" value="Resume" onClick="showCodeAndResume()" class="inlineLeft marginRight" style="width:80px;">
+                <input type="button" value="Reset" onClick="showCodeAndReset()" class="inlineLeft marginRight" style="width:80px;">
+                <input type="checkbox" onClick="toggleOnComplete(this)"><label class="inlineLabel">Alert on complete</label>
+            </form>
+        </section>
+        <section class="marginBottom">
+            <div class="col full marginBottom marginTop">
+                <div class="code-contain marginBottom">
+                    <code id="codeVisualizer" class="indigo">var options = {<br>
+                        &emsp;&emsp;useEasing : true, <br>
+                        &emsp;&emsp;useGrouping : true, <br>
+                        &emsp;&emsp;separator : ',', <br>
+                        &emsp;&emsp;decimal : '.' <br>
+                        }<br>
+                        var demo = new countUp("myTargetElement", 24.02, 94.62, 0, 2, options);<br>
+                        demo.start();
+                    </code>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+<script type="text/javascript">
+
+    // set countUp options
+    var options = {
+        useEasing : true, // toggle easing
+        useGrouping : true, // 1,000,000 vs 1000000
+        separator : ',', // character to use as a separator
+        decimal : '.', // character to use as a decimal
+    }
+    var useOnComplete = false;
+    var useEasing = true;
+    var useGrouping = true;
+    
+    // create instance
+    window.onload = function() {
+        // fire animation
+        // var element = document.querySelector('.jumbo');
+        var demo = new countUp('myTargetElement', 24.02, 94.62, 2, 2.5, options);
+        demo.start();
+
+        // display version (no hassling with markup!)
+        document.getElementById('version').innerHTML = 'v'+demo.version();
+    }
+
+    // for demo:
+    function swapValues() {
+        var oldStartVal = document.getElementById("startVal").value;
+        var oldEndVal = document.getElementById("endVal").value;
+        document.getElementById("startVal").value = oldEndVal;
+        document.getElementById("endVal").value = oldStartVal;
+        updateCodeVisualizer();
+    }
+    var code;
+    function createCountUp() {
+
+        var startVal = document.getElementById("startVal").value;
+        startVal = Number(startVal.replace(',','').replace(' ',''));
+        var endVal = document.getElementById("endVal").value;
+        endVal = Number(endVal.replace(',','').replace(' ',''));
+        var decimals = document.getElementById("decimals").value;
+        var duration = document.getElementById("duration").value; 
+
+        options = {
+            useEasing : useEasing,
+            useGrouping : useGrouping,
+            separator : document.getElementById("separator").value,
+            decimal : document.getElementById("decimal").value
+        }
+
+        // you don't have to create a new instance of countUp every time you start an animation,
+        // but I do here in case user changes values in demo.
+        demo = new countUp("myTargetElement", startVal, endVal, decimals, duration, options);
+
+        if (useOnComplete) {
+            demo.start(methodToCallOnComplete);
+        } else {
+            demo.start();
+        }
+
+        updateCodeVisualizer();
+    }
+    function showCodeAndStop() {
+        code = 'demo.stop();';
+        document.getElementById("codeVisualizer").innerHTML = code;
+
+        demo.stop();
+    }
+    function showCodeAndReset() {
+        code = 'demo.reset();';
+        document.getElementById("codeVisualizer").innerHTML = code;
+
+        demo.reset();
+    }
+    function showCodeAndResume() {
+        code = 'demo.resume();';
+        document.getElementById("codeVisualizer").innerHTML = code;
+
+        demo.resume();
+    }
+    function toggleOnComplete(checkbox) {
+
+        if (checkbox.checked) {
+            useOnComplete = true;
+        } else {
+            useOnComplete = false;
+        }
+        updateCodeVisualizer();
+    }
+    function toggleEasing(checkbox) {
+
+        if (checkbox.checked) {
+            useEasing = true;
+        } else {
+            useEasing = false;
+        }
+        updateCodeVisualizer();
+    }
+    function toggleGrouping(checkbox) {
+
+        if (checkbox.checked) {
+            useGrouping = true;
+        } else {
+            useGrouping = false;
+        }
+        updateCodeVisualizer();
+    }
+    function methodToCallOnComplete() {
+        console.log('COMPLETE!');
+        alert('COMPLETE!');
+    }
+    function updateCodeVisualizer() {
+        var startVal = document.getElementById("startVal").value;
+        startVal = Number(startVal.replace(',','').replace(' ',''));
+        var endVal = document.getElementById("endVal").value;
+        endVal = Number(endVal.replace(',','').replace(' ',''));
+        var decimals = document.getElementById("decimals").value;
+        var duration = document.getElementById("duration").value;
+        var separator = document.getElementById("separator").value;
+        var decimal = document.getElementById("decimal").value;
+
+        var code = 'var options = {<br>';
+        code += (useEasing) ? '&emsp;&emsp;useEasing : true, <br>' : '&emsp;&emsp;useEasing : false, <br>';
+        code += (useGrouping) ? '&emsp;&emsp;useGrouping : true, <br>' : '&emsp;&emsp;useGrouping : false, <br>';
+        code += '&emsp;&emsp;separator : \''+separator+'\', <br>';
+        code += '&emsp;&emsp;decimal : \''+decimal+'\' <br>';
+        code += '}<br>';
+        code += 'var demo = new countUp("myTargetElement", '+startVal+', '+endVal+', '+decimals+', '+duration+', options);<br>';
+        if (useOnComplete) {
+            code += 'demo.start(methodToCallOnComplete);';
+        } else {
+            code += 'demo.start();';
+        }
+        document.getElementById("codeVisualizer").innerHTML = code;
+    }
+    </script>
+</html>
