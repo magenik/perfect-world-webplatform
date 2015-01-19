@@ -1,25 +1,55 @@
-## Laravel PHP Framework
+# Build your PW Webserver Panel
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+## Installation
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+> [Want a 10-minutes video overview?](https://www.youtube.com/watch?v=m5Jmh9JKnyQ)
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
 
-## Official Documentation
+## Laravel 4.2 and Below
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
+The Project is build under Laravel Framework through Composer
 
-### Contributing To Laravel
+You can install Composer Global into your system by following this link
 
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
+> [Install Composer](https://getcomposer.org/doc/00-intro.md)
 
-### License
+Next, update Composer from the Terminal: (if your composer is set properly as Global run)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+    composer update --dev
+
+Next, Edit your http.config for match your public folder of this WebPlatform Pack
+
+	As i'm using Bitnami Stack on my local mine is located here :
+	C:\Bitnami\wampstack-5.4.36-0\apache2\conf\
+	Be sure that you mod_rewrite is enabled
+
+	<VirtualHost 192.168.2.10:80>
+    ServerAdmin root@localhost
+    ServerName dev.demopanel
+    DocumentRoot "C:/Bitnami/wampstack-5.4.36-0/frameworks/laravel/demopanel/public"
+    <Directory "C:/Bitnami/wampstack-5.4.36-0/frameworks/laravel/demopanel/public/">
+    Options +MultiViews
+    AllowOverride All
+        <IfVersion < 2.3 >
+            Order allow,deny
+            Allow from all
+        </IfVersion>
+        <IfVersion >= 2.3>
+            Require all granted
+        </IfVersion>
+    </Directory>
+	</VirtualHost>
+
+From Above it's mean Public folder will be your webstie 
+```
+http://dev.demopanel
+```
+Restart your apache when this folder is created
+
+Now Put all the project into this folder C:/Bitnami/wampstack-5.4.36-0/frameworks/laravel/demopanel/
+Remember this Folder link is for demo purpose that may be different depend of your web setting
+
+Once this operation completes, the final step is to create your database and run the sql file provide in the package (Only if you gonna fresh install database for your server)
+
+(Incoming...)
