@@ -50,6 +50,55 @@ Restart your apache when this folder is created
 Now Put all the project into this folder C:/Bitnami/wampstack-5.4.36-0/frameworks/laravel/demopanel/
 Remember this Folder link is for demo purpose that may be different depend of your web setting
 
-Once this operation completes, the final step is to create your database and run the sql file provide in the package (Only if you gonna fresh install database for your server)
+Once this operation completes, the final step is to create your database and run the sql file provide in the package .setup/demo.sql
+(Only if you gonna fresh install database for your server)
 
-(Incoming...)
+## Begin the installation
+
+Ok so now our database is created we have to set the project with our mysql information
+
+1/ edit
+    'bootstrap\start.php'
+```php
+$env = $app->detectEnvironment(array(
+
+    'local' => array('YOURCOMPUTERNAME'),
+
+));
+```
+
+2/ edit
+    'app\config\local\database.php'  &  'app\config\database.php'
+
+as we use Mysql on our server so we set Mysql part only
+edit your database info as below
+
+```php
+        'mysql' => array(
+            'driver'    => 'mysql',
+            'host'      => 'localhost',
+            'database'  => 'demo',
+            'username'  => 'root',
+            'password'  => 'root',
+            'charset'   => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix'    => '',
+        ),
+```
+
+3/ then we have to generate your Laravel's key
+
+    php artisan key:generate
+
+if it's doesnt load auto in app.php just copy past the key in it
+
+4/ Now we are ready for import your admin account for that you have to edit file below with your informations
+    'app\database\seeds\AdminSeeder.php'  &  app\database\seeds\DatabaseSeeder.php
+
+5/ Now we can run database seed for import your admin account as first record row
+
+    php artisan db:seed
+
+## Your Website is ready
+
+you can now access to your website and wait for features updates from me :)

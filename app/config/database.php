@@ -55,9 +55,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'demo',
+			'database'  => 'demo_panel',
 			'username'  => 'root',
-			'password'  => 'root',
+			'password'  => 'Totoche',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
