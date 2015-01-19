@@ -6,6 +6,7 @@
 
 return array(
 
+	'name'					=> 'Game Account',
 	'user_profile'			=> 'User Profile',
 	'first_name'			=> 'First Name',
 	'last_name'				=> 'Last Name',

@@ -79,6 +79,14 @@ View User Details
                                                 <form method="post" action="#">
 
                                                 <table class="table table-bordered table-striped" id="users">
+
+                                                    <tr>
+                                                        <td>@lang('users/title.name')</td>
+                                                        <td>
+                                                            {{ $user->name }}
+                                                        </td>
+
+                                                    </tr>
     
                                                     <tr>
                                                         <td>@lang('users/title.first_name')</td>

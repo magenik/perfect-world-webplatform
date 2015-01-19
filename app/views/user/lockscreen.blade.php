@@ -23,7 +23,7 @@
             <div class="form-box">
                 <form method="POST" name="screen">
                     <div class="form">
-                        <p class="form-control-static">ADMIN</p>
+                        <p class="form-control-static">Page Locked</p>
                         <input type="password" name="user" class="form-control" placeholder="password">
                         <button class="btn btn-info btn-block login" id="index" type="submit">GO</button>
                     </div>

@@ -5,7 +5,7 @@ var textfield = $("input[name=user]");
                 //little validation just to check username
                 if (textfield.val() !== "") {
                     //$("body").scrollTo("#output");
-                    $("#output").addClass("alert alert-success animated fadeInUp").html("Welcome back Admin");
+                    $("#output").addClass("alert alert-success animated fadeInUp").html("Welcome Back");
                     $("#output").removeClass(' alert-danger');
                     $("input").css({
                     "height":"0",
@@ -18,7 +18,7 @@ var textfield = $("input[name=user]");
                     .removeClass("btn-info")
                     .addClass("btn-success").click(function(){
 
-                     window.location.href = 'index.html';
+                     window.location.href = './';
                     });
                     
                     //show avatar
