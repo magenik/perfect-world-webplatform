@@ -100,14 +100,17 @@ class AuthController extends SwoController
             $last_id = DB::table('users')->max('id'); //get last inserted record's user id value
             $new_id = $last_id + 16;
 
-            $Salt_md5 = md5((Input::get('name'))+(Input::get('password')));
+            $Salt_md5 = md5((Input::get('name')).(Input::get('password')));
             $Salt = "0x".$Salt_md5;
             
             $password = Hash::make(Input::get('password'));
 
+            //$result = DB::select('call adduser_laravel(?)',array($Salt));
+
             $user = Sentry::register(array(
                 'id'         => $new_id,
                 'passwd'     => $Salt,
+                'creatime'   => DB::raw('CURRENT_TIMESTAMP'),
                 'name'       => Input::get('name'),
                 'first_name' => Input::get('first_name'),
                 'last_name'  => Input::get('last_name'),
@@ -115,7 +118,6 @@ class AuthController extends SwoController
                 'password'   => Input::get('password'),
                 'activated'  => 1 // make it 0 if you don't want to activate user on registration
             ));
-
 
             //add user to 'User' group
             $group = Sentry::findGroupByName('User');

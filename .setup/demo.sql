@@ -224,6 +224,7 @@ CREATE TABLE `users` (
   `name` varchar(32) NOT NULL DEFAULT '',
   `passwd` varchar(64) NOT NULL,
   `password` varchar(64) NOT NULL,
+  `creatime` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `Prompt` varchar(32) NOT NULL DEFAULT '',
   `answer` varchar(32) NOT NULL DEFAULT '',
   `truename` varchar(32) NOT NULL DEFAULT '',
@@ -260,6 +261,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_name_unique` (`name`),
   UNIQUE KEY `users_email_unique` (`email`),
+  KEY `users_creatime_normal` (`creatime`),
   KEY `users_activation_code_index` (`activation_code`),
   KEY `users_reset_password_code_index` (`reset_password_code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -292,7 +294,6 @@ BEGIN
   DECLARE passwdtemp VARCHAR(64);
   START TRANSACTION;
     SELECT id, passwd INTO uid1, passwdtemp FROM users WHERE name = name1;
-    SELECT fn_varbintohexsubstring(1,passwdtemp,1,0) INTO passwd1;
   COMMIT;
 END
 ;;

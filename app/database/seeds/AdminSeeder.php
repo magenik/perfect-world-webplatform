@@ -19,6 +19,7 @@ class AdminSeeder extends Seeder {
 		Sentry::getUserProvider()->create(array(
 			'id'          => $new_id,
             'passwd'      => $Salt,
+            'creatime'    => DB::raw('CURRENT_TIMESTAMP'),
 			'email'       => 'admin@admin.com',
 			'password'    => "123456",
 			'first_name'  => 'Admin',
