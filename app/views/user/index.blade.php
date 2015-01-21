@@ -49,23 +49,47 @@ Dashboard
                         <ul class="timeline">
                             <li>
                                 <div class="timeline-badge">
-                                    <i class="livicon" data-name="users" data-c="#fff" data-hc="#fff" data-size="18" data-loop="true"></i>
+                                    <i class="livicon" data-name="hammer" data-c="#fff" data-hc="#fff" data-size="18" data-loop="true"></i>
                                 </div>
                                 <div class="timeline-panel" style="display:inline-block;">
                                     <div class="timeline-heading">
-                                        <h4 class="timeline-title">We are a multi national company now</h4>
+                                        <h4 class="timeline-title">Version 1.0 Dev</h4>
                                         <p>
                                             <small class="text-muted">
                                                 <i class="livicon" data-name="bell" data-c="#f89a14" data-hc="#f89a14" data-size="18" data-loop="true"></i>
-                                                11 hours ago via Twitter
+                                                This file is from Revision 15
                                             </small>
                                         </p>
                                     </div>
                                     <div class="timeline-body">
                                         <p>
-                                            Lorem Ipsum is simply dummy, vidis lio, in elementis mé pra quem é amistosis quis leo..
+                                            The project is under developpement so please be patient for having a stable version of it.<br>
+                                            Thank you for your patience.<br>
+                                            Magenik
                                         </p>
-                                    </div>
+                                    </div><hr>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                                                <i class="glyphicon glyphicon-cog"></i>
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li>
+                                                    <a href="http://forum.ragezone.com/f868/perfect-world-swordsman-webplatform-1047863/" target="_blank">Ragezone</a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://github.com/magenik/perfect-world-webplatform" target="_blank">Git Repo</a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://code.google.com/p/tortoisegit/wiki/Download" target="_blank">TortoiseGit Client</a>
+                                                </li>
+                                                <li class="divider"></li>
+                                                <li>
+                                                    <a href="https://www.swordsmaneu.com/" target="_blank">Live Web</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    <a href="https://github.com/magenik/perfect-world-webplatform/blob/master/README.md"  target="_blank" class="pull-right">Read more</a>
                                 </div>
                             </li>
                             <li class="timeline-inverted">
@@ -74,10 +98,10 @@ Dashboard
                                 </div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
-                                        <h4 class="timeline-title">We won best website award</h4>
+                                        <h4 class="timeline-title">Supported game server : </h4>
                                     </div>
                                     <div class="timeline-body">
-                                        <p>Lorem Ipsum is simply dummy, vidis litro abertis.</p>
+                                        <p>This platform will support almost all Perfect World's Game.</p>
                                     </div>
                                 </div>
                             </li>
@@ -87,11 +111,12 @@ Dashboard
                                 </div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
-                                        <h4 class="timeline-title">Hired our first employee</h4>
+                                        <h4 class="timeline-title">Developpers / Team</h4>
                                     </div>
                                     <div class="timeline-body">
                                         <p>
-                                            Lorem Ipsum is simply dummy, vidis litro abertis. Consetis adipiscings elitis. Pra uium u num gostis.
+                                            The project leader : Magenik.
+                                            anyone who want to join just contact me on skype : Magenik
                                         </p>
                                     </div>
                                 </div>
@@ -102,233 +127,19 @@ Dashboard
                                 </div>
                                 <div class="timeline-panel">
                                     <div class="timeline-heading">
-                                        <h4 class="timeline-title">Rented an office space</h4>
+                                        <h4 class="timeline-title">Perfect World Framework Project</h4>
                                     </div>
                                     <div class="timeline-body">
                                         <p>
-                                            Lorem Ipsum is simply dummy, vidis litro abertis. Cais bolis eu num gostis.
+                                            19/01/2015 Start of the Project.
                                         </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="timeline-badge primary">
-                                    <i class="livicon" data-name="hammer" data-c="#fff" data-hc="#fff" data-size="18" data-loop="true"></i>
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">Planning to open an office</h4>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>
-                                            Lorem Ipsum is simply dummy, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, s mé pra quem é amistosis.
-                                        </p>
-                                        <hr>
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
-                                                <i class="glyphicon glyphicon-cog"></i>
-                                                <span class="caret"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li>
-                                                    <a href="#">Action</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Another action</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Something else here</a>
-                                                </li>
-                                                <li class="divider"></li>
-                                                <li>
-                                                    <a href="#">Separated link</a>
-                                                </li>
-                                            </ul>
-                                        </div>
                                     </div>
                                 </div>
                             </li>
                         </ul>
                     </div>
-                    <!--timeline ends--> </div>
-            </div>
-        </div>
-    </div>
-    <!--timeline2-->
-    <div class="row">
-        <div class="col-md-12">
-            <div class="panel panel-success">
-                <div class="panel-heading">
-                    <h3 class="panel-title">
-                        <i class="livicon" data-name="sky-dish" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
-                        Timeline 2
-                    </h3>
-                    <span class="pull-right clickable">
-                        <i class="glyphicon glyphicon-chevron-up"></i>
-                    </span>
                 </div>
-                <div class="panel-body">
-                    <div class="row">
-                        <ul class="timeline2">
-                            <li>
-                                <div class="timeline2-badge">
-                                    <a>
-                                        <i class="glyphicon glyphicon-record invert" rel="tooltip" title="7Hours ago via Facebook"></i>
-                                    </a>
-                                </div>
-                                <div class="timeline2-panel">
-                                    <div class="timeline2-body">
-                                        <p>I Proposed and She said......</p>
-                                    </div>
-                                    <div class="timeline2-footer">
-                                        <a>
-                                            <i class="glyphicon glyphicon-thumbs-up"></i>
-                                        </a>
-                                        <a>
-                                            <i class="glyphicon glyphicon-share"></i>
-                                        </a>
-                                        <a class="pull-right">Read more</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="timeline2-inverted">
-                                <div class="timeline2-badge">
-                                    <a>
-                                        <i class="glyphicon glyphicon-record invert" rel="tooltip" title="2 Days ago via Facebook"></i>
-                                    </a>
-                                </div>
-                                <div class="timeline2-panel">
-                                    <div class="timeline2-heading">
-                                        <img data-src="holder.js/580x160/#489a14:#fff" class='img-responsive' alt="image"></div>
-                                    <div class="timeline2-body">
-                                        <p>We went out for Dinner and then long Drive</p>
-                                    </div>
-                                    <div class="timeline2-footer">
-                                        <a>
-                                            <i class="glyphicon glyphicon-thumbs-up"></i>
-                                        </a>
-                                        <a>
-                                            <i class="glyphicon glyphicon-share"></i>
-                                        </a>
-                                        <a class="pull-right">Read more</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="timeline2-badge">
-                                    <a>
-                                        <i class="glyphicon glyphicon-record" rel="tooltip" title="5 Days ago via Facebook"></i>
-                                    </a>
-                                </div>
-                                <div class="timeline2-panel">
-                                    <div class="timeline2-heading">
-                                        <img data-src="holder.js/580x160/#418bca:#fff" class='img-responsive' alt="image"></div>
-                                    <div class="timeline2-body">
-                                        <p>I asked her contact number and She Gave IT!!</p>
-                                    </div>
-                                    <div class="timeline2-footer">
-                                        <a>
-                                            <i class="glyphicon glyphicon-thumbs-up"></i>
-                                        </a>
-                                        <a>
-                                            <i class="glyphicon glyphicon-share"></i>
-                                        </a>
-                                        <a class="pull-right">Read more</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="timeline2-inverted">
-                                <div class="timeline2-badge">
-                                    <a>
-                                        <i class="glyphicon glyphicon-record invert" rel="tooltip" title="6 Days ago via Facebook"></i>
-                                    </a>
-                                </div>
-                                <div class="timeline2-panel">
-                                    <div class="timeline2-body">
-                                        <p>I asked her for a cup of coffee and She said Yes!!</p>
-                                    </div>
-                                    <div class="timeline2-footer">
-                                        <a>
-                                            <i class="glyphicon glyphicon-thumbs-up"></i>
-                                        </a>
-                                        <a>
-                                            <i class="glyphicon glyphicon-share"></i>
-                                        </a>
-                                        <a class="pull-right">Read more</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="timeline2-badge">
-                                    <a>
-                                        <i class="glyphicon glyphicon-record" rel="tooltip" title="7 Days ago via Facebook"></i>
-                                    </a>
-                                </div>
-                                <div class="timeline2-panel">
-                                    <div class="timeline2-heading">
-                                        <img data-src="holder.js/580x160/#67c5df:#fff" class='img-responsive' alt="image"></div>
-                                    <div class="timeline2-body">
-                                        <p>She accepted my friend Request on facebook</p>
-                                    </div>
-                                    <div class="timeline2-footer">
-                                        <a>
-                                            <i class="glyphicon glyphicon-thumbs-up"></i>
-                                        </a>
-                                        <a>
-                                            <i class="glyphicon glyphicon-share"></i>
-                                        </a>
-                                        <a class="pull-right">Read more</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="timeline2-inverted">
-                                <div class="timeline2-badge">
-                                    <a>
-                                        <i class="glyphicon glyphicon-record invert" rel="tooltip" title="9 Days ago via Facebook"></i>
-                                    </a>
-                                </div>
-                                <div class="timeline2-panel">
-                                    <div class="timeline2-heading">
-                                        <img data-src="holder.js/580x160/#6cc66c:#fff" class='img-responsive' alt="image"></div>
-                                    <div class="timeline2-body">
-                                        <p>I said HI she too said HI</p>
-                                    </div>
-                                    <div class="timeline2-footer">
-                                        <a>
-                                            <i class="glyphicon glyphicon-thumbs-up"></i>
-                                        </a>
-                                        <a>
-                                            <i class="glyphicon glyphicon-share"></i>
-                                        </a>
-                                        <a class="pull-right">Read more</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="timeline2-badge">
-                                    <a>
-                                        <i class="glyphicon glyphicon-record invert" rel="tooltip" title="11 Days ago via Facebook"></i>
-                                    </a>
-                                </div>
-                                <div class="timeline2-panel">
-                                    <div class="timeline2-body">
-                                        <p>I Smile at her and she smiled Back</p>
-                                    </div>
-                                    <div class="timeline2-footer">
-                                        <a>
-                                            <i class="glyphicon glyphicon-thumbs-up"></i>
-                                        </a>
-                                        <a>
-                                            <i class="glyphicon glyphicon-share"></i>
-                                        </a>
-                                        <a class="pull-right">Read more</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="clearfix" style="float: none;"></li>
-                        </ul>
-                    </div>
-                    <!--timeline ends--> </div>
+                <!--timeline ends-->
             </div>
         </div>
     </div>
