@@ -685,5 +685,29 @@ class UsersController extends SwoController
         
     }
 
+    public function postSavepassword()
+    {
+        $rules = array(
+            'password'=>'required|alpha_num|between:6,12',
+            'password_confirmation'=>'required|alpha_num|between:6,12'
+            );      
+        $validator = Validator::make(Input::all(), $rules);
+        if ($validator->passes()) {
+            $New_Salt_md5 = md5((User::find(Session::get('name'))).(Input::get('password')));
+            $New_Salt = "0x".$New_Salt_md5;
+            $user = User::find(Session::get('uid'));
+            $user->passwd = $New_Salt;
+            $user->password = Hash::make(Input::get('password'));
+            $user->save();
+
+            return Redirect::to('user')->with('message',SiteHelpers::alert('success','Password has been saved!'));
+        } else {
+            return Redirect::to('user')->with('message', SiteHelpers::alert('error','The following errors occurred')
+            )->withErrors($validator)->withInput();
+        }   
+    
+    }   
+    
+
 
 }

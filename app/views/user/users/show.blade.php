@@ -185,44 +185,33 @@ View User Details
                                 <!-- CSRF Token -->
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                                 
-                                <div class="form-body">
-                                    <div class="form-group">
-                                        <label for="inputpassword" class="col-md-3 control-label">
-                                            Password
-                                            <span class='require'>*</span>
-                                        </label>
-                                        <div class="col-md-9">
-                                            <div class="input-group">
-                                                <span class="input-group-addon">
-                                                    <i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#000" data-hc="#000"></i>
-                                                </span>
-                                                <input type="password" placeholder="Password" class="form-control"/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="inputnumber" class="col-md-3 control-label">
-                                            Confirm Password
-                                            <span class='require'>*</span>
-                                        </label>
-                                        <div class="col-md-9">
-                                            <div class="input-group">
-                                                <span class="input-group-addon">
-                                                    <i class="livicon" data-name="key" data-size="16" data-loop="true" data-c="#000" data-hc="#000"></i>
-                                                </span>
-                                                <input type="password" placeholder="Password" class="form-control"/>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-actions">
-                                    <div class="col-md-offset-3 col-md-9">
-                                        <button type="submit" class="btn btn-primary">Submit</button>
-                                        &nbsp;
-                                        <button type="button" class="btn btn-danger">Cancel</button>
-                                        &nbsp;
-                                        <input type="reset" class="btn btn-default hidden-xs" value="Reset"></div>
-                                </div>
+                                <div class="tab-pane  m-t" id="pass">
+ 
+       
+          <div class="form-group">
+            <label for="ipt" class=" control-label col-md-4"> {{ Lang::get('core.newpassword'); }} </label>
+            <div class="col-md-8">
+            <input name="password" type="password" id="password" class="form-control input-sm" value="" /> 
+             </div> 
+          </div>  
+          
+          <div class="form-group">
+            <label for="ipt" class=" control-label col-md-4"> {{ Lang::get('core.conewpassword'); }}  </label>
+            <div class="col-md-8">
+            <input name="password_confirmation" type="password" id="password_confirmation" class="form-control input-sm" value="" />  
+             </div> 
+          </div>    
+         
+        
+          <div class="form-group">
+            <label for="ipt" class=" control-label col-md-4">&nbsp;</label>
+            <div class="col-md-8">
+                <button class="btn btn-danger" type="submit"> {{ Lang::get('core.sb_savechanges'); }} </button>
+             </div> 
+          </div>   
+      </div>
+                                
+                                
                             </form>
                         </div>
                     </div>

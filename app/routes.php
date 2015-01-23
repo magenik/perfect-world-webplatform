@@ -28,6 +28,7 @@ Route::filter('Sentry', function()
 	Route::post('signin','AuthController@postSignin');
 	Route::post('signup',array('as' => 'signup','uses' => 'AuthController@postSignup'));
 	Route::post('forgot-password',array('as' => 'forgot-password','uses' => 'AuthController@postForgotPassword'));
+    Route::post('{userId}/pass', 'UsersController@postSavepassword');
 
 	Route::group(array('prefix' => 'user'), function () {
 
