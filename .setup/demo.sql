@@ -291,9 +291,7 @@ DROP PROCEDURE IF EXISTS `acquireuserpasswd`;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `acquireuserpasswd`(in name1 VARCHAR(64), out uid1 INTEGER, out passwd1 VARCHAR(64))
 BEGIN
-  DECLARE passwdtemp VARCHAR(64);
-  START TRANSACTION;
-    SELECT id, passwd INTO uid1, passwdtemp FROM users WHERE name = name1;
+    SELECT id, passwd INTO uid1, passwd1 FROM users WHERE name = name1;
   COMMIT;
 END
 ;;
